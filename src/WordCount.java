@@ -29,14 +29,14 @@ public class WordCount {
     //private int lineCount = 1;
     HashSet <String> stopwords = new HashSet<>();
     public void setup(Context context) throws IOException {
-    	File file = new File("/home/cj9p5/assignment_1/stopwords.txt");
+    	File file = new File("./wordcount/file/stopwords.txt");
     	@SuppressWarnings("resource")
 		BufferedReader br = new BufferedReader(new FileReader(file));
     	String str;
     	while( (str= br.readLine())!= null) {
     		stopwords.add(str);
     	}
-    	System.out.println("words log" + stopwords);
+    	//System.out.println("words log" + stopwords);
     }
     public void map(Object key, Text value, Context context
                     ) throws IOException, InterruptedException {

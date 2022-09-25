@@ -20,7 +20,8 @@ import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
-
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 public class SortedWordCount {
 
   public static class MyMapper 
@@ -32,7 +33,7 @@ public class SortedWordCount {
     HashSet <String> stopwords = new HashSet<>();
     @Override
     public void setup(Context context) throws IOException {
-    	File file = new File("/home/cj9p5/assignment_1/stopwords.txt");
+    	File file = new File("./wordcount/file/stopwords.txt");
     	@SuppressWarnings("resource")
 		BufferedReader br = new BufferedReader(new FileReader(file));
     	String str;

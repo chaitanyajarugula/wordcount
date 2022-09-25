@@ -1,12 +1,10 @@
-/WordCount$MyReducer$1.class
+/AverageLength$MyMapper.class
+/AverageLength$MyReducer.class
+/AverageLength.class
 /SortedWordCount$MyMapper.class
 /SortedWordCount$MyReducer$1.class
 /SortedWordCount$MyReducer.class
 /SortedWordCount.class
-/AverageLength$MyMapper.class
-/AverageLength$MyReducer$1.class
-/AverageLength$MyReducer.class
-/AverageLength.class
 /WordCount$MyMapper.class
 /WordCount$MyReducer.class
 /WordCount.class

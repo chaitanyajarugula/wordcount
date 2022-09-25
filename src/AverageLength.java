@@ -1,4 +1,5 @@
 import java.io.*;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -8,9 +9,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.SortedMap;
 import java.util.StringTokenizer;
-import java.util.concurrent.ConcurrentSkipListMap;
+import java.math.RoundingMode;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -34,7 +34,7 @@ public class AverageLength {
     HashSet <String> stopwords = new HashSet<>();
     @Override
     public void setup(Context context) throws IOException {
-    	File file = new File("/home/cj9p5/assignment_1/stopwords.txt");
+    	File file = new File("./wordcount/file/stopwords.txt");
     	@SuppressWarnings("resource")
 		BufferedReader br = new BufferedReader(new FileReader(file));
     	String str;
@@ -67,6 +67,7 @@ public class AverageLength {
        extends Reducer<Text,Text,Text,DoubleWritable> {
 	  
     private IntWritable result = new IntWritable();
+    private static final DecimalFormat df = new DecimalFormat("0.00");
 //    private Map<Text, IntWritable> countMap = new HashMap<Text, IntWritable>();
 //    private SortedMap<Integer, Text> tmap2;
     
@@ -91,7 +92,7 @@ public class AverageLength {
     	  sum+=length;
     	  total_count+=count_vals;
       }
-      final double average = sum/total_count;
+      final double average = Double.parseDouble(df.format(sum/total_count));
      context.write(key, new DoubleWritable(average));
 //    public void cleanup(Context context) {
 //    	//Method used to sort data
