@@ -64,4 +64,9 @@ hdfs dfs -mkdir -p InputFolder
 Warning 1: WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable  
 Fix: You can just ignore this warning.
 
-
+### Summary and Contributions:
+1. **Get Rid of Punctuations (Team work):** We used regex pattern to filter all the letters that does not fall under the specified category and replaced them with spaces
+2. **Get rid of stop-words(Team Work):** We generated a astopwords file which included all the majority stop words such as a,as,the etc., and we made a hashset of string datatype and appended all the data in the file to the hashset which is further used to filter the words in mapper.
+3. **Individual Part-1 (Tarun Sai Naregudem):** I have converted the line to string and used .toLowerCase() to convert all words into lower case which enabled case-insensitivity in the document. 
+4. **Indivudal Part-2 (karthikeya Kuchuru Reddy):** I have extended Individual part-1 with a cleanup function where I have used an array list of entries with key as text and value as IntWritable datatype and used collections.sort and implemented the abstract method compare where two values of different entries are compared with each other.
+5. **Individual Part-3 (Chaitanya Jarugula):** I have modfied the key and value class of mapper and reducer. Mapper consists of a {text,text} classes where key is the first letter of the word and value is the combination of one_<length of the word>. reducer interprets and splits the values into total count and sum of length of the words. reducer finally writes word, average calculated.
