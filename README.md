@@ -11,7 +11,7 @@
 * Open “eclipse”, right click on “Package Explorer” window, click import.
 * Select “Git”-> “Projects from Git” and click “next”.
 * Select “clone url” and click “next”.
-* Paste “https://github.com/chaitanyajarugula/wordcount” in the “url” textbox, and click “next”. 
+* Paste “ https://github.com/chaitanyajarugula/wordcount ” in the “url” textbox, and click “next”. 
 * Choose “Import existing project” and click “finish”.
 
 ### Referencing libraries:
