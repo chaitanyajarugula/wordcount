@@ -1,5 +1,5 @@
-# SimpleWordCount
-
+# Word Count Assignment - 1
+## Teammates: Chaitanya Jarugula, Tarun Sai Naregudem, Karthikeya Reddy Kuchuru
 ### General Information:
 
 * Operating System:         Mac -> Microsoft Remote Desktop, Windows -> Default Remote Desktop, Ubuntu -> Remmina
@@ -11,12 +11,12 @@
 * Open “eclipse”, right click on “Package Explorer” window, click import.
 * Select “Git”-> “Projects from Git” and click “next”.
 * Select “clone url” and click “next”.
-* Paste “https://github.com/ArindamK92/CS6304_SimpleWordCount” in the “url” textbox, and click “next”. 
+* Paste “https://github.com/chaitanyajarugula/wordcount” in the “url” textbox, and click “next”. 
 * Choose “Import existing project” and click “finish”.
 
 ### Referencing libraries:
 * Right click on project and select “build path”-> “configure build path” ->”libraries”->”add external jars”.
-* Go to "home" -> "git" -> "SimpleWordCount" -> "lib" and select all jars and click ok.
+* Go to "home" -> "git" -> "wordcount" -> "lib" and select all jars and click ok.
 
 ### Input file:
 * Open folder "file", you will see the input file named "WordCount.txt"
@@ -24,7 +24,7 @@
 ### Output jar:
 * Right click on project and select "Export".
 * Choose type "Java" -> "Jar file" and click "next".
-* Select the export destination as "home" -> "git" -> "SimpleWordCount" -> "jar" and click "Finish".
+* Select the export destination as "home" -> "git" -> "WordCount" -> "jar" and click "Finish".
 
 ### Hadoop Commands:
 ```
@@ -39,7 +39,6 @@ hadoop fs -rm -r OutputFolder                                     //to remove "O
 
 - remove OutputFolder before generating the next results.
 - remove/clean InputFolder if you want to use a different file as input.
-
 
 ### Common Errors:
 Error 1: mkdir: Call From cs6304-akkcm-02/127.0.1.1 to localhost:9000 failed on connection exception: java.net.ConnectException: Connection refused  
